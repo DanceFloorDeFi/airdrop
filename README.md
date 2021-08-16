@@ -13,3 +13,8 @@ To recieve the airdrop you must have belonged to these groups on the snapshot da
 
 ## distribution: 
 If you were a member of multiple groups your rewards are amplified. 
+
+## In this repo:
+- `TheList` - a randomized order list of all the addresses and their rewards for being in various groups.
+- A python script that loops `TheList`, and combines duplicates
+- `FinalList` - a completed list of the final token amounts and users for the airdrop
