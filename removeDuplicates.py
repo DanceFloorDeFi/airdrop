@@ -6,12 +6,13 @@ with open('TheList.csv', 'r') as read_obj:
     # Iterate over each row in the csv using reader object
 
     data = {}
-
     counter = 0
 
     for row in csv_reader:
         # row variable is a list that represents a row in csv
         #print(row.upper())
+
+        #if the address exists, add tokens, otherwise create the key and give some
         if row[0].lower() in data:
             data[row[0].lower()] = data[row[0].lower()] + float(row[1])
         else:
@@ -19,7 +20,7 @@ with open('TheList.csv', 'r') as read_obj:
 
         counter = counter + 1
         if(counter % 1000 == 0):
-            print("checked " + str(counter))
+            print("checked " + str(counter)) #helpful for debugging
 
 print("==== done ====")
 #print(data)
@@ -29,4 +30,4 @@ with open('FinalList.csv', 'w') as f:
     write = csv.writer(f)
 
     for key, value in data.items():
-       write.writerow([key, value])
+       write.writerow([key, value]) #write a dict
