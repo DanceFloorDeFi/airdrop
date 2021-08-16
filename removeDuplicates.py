@@ -12,10 +12,10 @@ with open('TheList.csv', 'r') as read_obj:
     for row in csv_reader:
         # row variable is a list that represents a row in csv
         #print(row.upper())
-        if row[0].upper() in data:
-            data[row[0].upper()] = data[row[0].upper()] + float(row[1])
+        if row[0].lower() in data:
+            data[row[0].lower()] = data[row[0].lower()] + float(row[1])
         else:
-            data[row[0].upper()] = float(row[1])
+            data[row[0].lower()] = float(row[1])
 
         counter = counter + 1
         if(counter % 1000 == 0):
